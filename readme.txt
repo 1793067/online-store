@@ -20,7 +20,8 @@
           git status
           git add --all
           git commit -m 'update'  
-        
+          git push
+          
         СЕРВЕРНАЯ ЧАСТЬ:
 
 1. Внутри папки server создаем файл 'index.js' с него будет начинаться запуск приложения
