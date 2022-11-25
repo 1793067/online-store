@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const db = require('./db');
+const userRouter = require('./routes/user.routes')
 
 const PORT = process.env.PORT || 5000; //порт с которого будет работать приложение
 

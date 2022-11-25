@@ -10,7 +10,16 @@
         git add --all
     3.2 зафиксируем изменения:
         git commit -m 'initiating of my project'
-        
+    3.3 создаем новый репозиторий на Github:
+    https://github.com/ -> авторизуемся -> "+" -> создаем репозиторий
+    3.4 подключаем удаленный репозиторий:
+        git remote add origin https://github.com/1793067/online-store.git
+        git branch -M main
+        git push -u origin main 
+    3.5 обновление репозитория
+          git status
+          git add --all
+          git commit -m 'update'  
         
         СЕРВЕРНАЯ ЧАСТЬ:
 
@@ -69,9 +78,13 @@
         8.3.4 Экспортируем модуль
     8.4 Создаем в корне SQL файл: database.sql
     terminal: /server touch database.sql
-        8.4 Создаем таблицы и связи в БД
+    8.5 Создаем таблицы и связи в БД
         ...
-
+    8.6 Команды:
+        postgres=# \l - получить список БД
+        postgres=# \c - подключение к БД
+        postgres=# \dt - вывод таблиц БД
+        postgres=# \q - выход из консоли
 
 9. Создаем папку controller - в ней будем работать с запросами. Внутри которой создадим файл user.controller.js. 
 Созданные в нем методы класса покажут, что будет уметь наше приложение
@@ -84,8 +97,10 @@
     terminal: /server mkdir routes; touch routes/user.routes.js
     10.1 в файле user.controller импортируем модуль express.
     10.2 импортируем объект класса из user.controller.js
-
+    10.3 для каждого метода userControler определим марщруты.
     Например: создать пользователя, запросить информацию о нем в БД, внести информацию в БД, изменить информацию в БД, удалить инфу
-    10.2 Экспортируем класс
+    10.4 Экспортируем класс
+
+11. Импортируем роутер в index.js файл
 
 Импортируем базу данных в user.controller

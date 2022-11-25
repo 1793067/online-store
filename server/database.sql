@@ -44,7 +44,7 @@ CREATE TABLE device_info(
 
 CREATE TABLE basket(
     id SERIAL PRIMARY KEY,
-    user_id INTEGER UNIQUE REFERENCES users ON DELETE CASCADE
+    user_id INTEGER UNIQUE REFERENCES users ON DELETE CASCADE --ошибка скорее всего должно быть ...REFERENCES users(id) ON ...
 );
 
 CREATE TABLE basket_device(
