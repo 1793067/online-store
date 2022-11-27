@@ -17,10 +17,13 @@
         git branch -M main
         git push -u origin main 
     3.5 обновление репозитория
-          git status
-          git add --all
-          git commit -m 'update'  
-          git push
+        git status
+        git add --all
+        git commit -m 'update'  
+        git push
+    3.6 подключние удаленного репозитория
+        В папке, куда необходимо скачать файлы из репозитория:
+        git clone https://github.com/1793067/online-store
           
         СЕРВЕРНАЯ ЧАСТЬ:
 
