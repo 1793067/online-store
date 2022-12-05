@@ -13,6 +13,9 @@ import { useNavigate } from 'react-router-dom' // хук, с помощью ко
 const NavBar = observer( () => {
     const {user} = useContext(Context)
     let navigate = useNavigate();
+
+
+    
     return (
         <Navbar bg="dark" variant="dark">
         <Container>

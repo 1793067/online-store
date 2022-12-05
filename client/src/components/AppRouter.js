@@ -6,7 +6,6 @@ import { authRoutes, publicRoutes } from '../routes';
 
 const AppRouter = () => {
     const {user} = useContext(Context)
-    console.log(user);
     return (
         <Routes> {/*Здесь Switch заменена на Routes. в этом компонете указываются всенен рабочие маршруты*/}
             {/*выражение a && b  вернет b если оба значения  истинны или 0 в ином случае. то есть authRoutes будут доступны только если пользователь авторизован и вычисляемая  строка непустая */}

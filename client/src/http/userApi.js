@@ -1,18 +1,22 @@
 //здесь реализуются функции авторизации, регистрации и проверки токена на валидность
 
 import { $authHost, $host } from "./index";
+import jwt_decode from 'jwt-decode' //для обратной раскодировки токена в информацию о пользователе
 
 export const registration = async (email, password) => {
-    const response = await $host.post('api/user/registration', {email, password, role: 'ADMIN'})
-    return response
+    const {data} = await $host.post('api/user/registration', {email, password, role: 'ADMIN'})
+    localStorage.setItem('token', data.token)
+    return jwt_decode(data.token)
 }
 
 export const login = async (email, password) => {
-    const response = await $host.post('api/user/login', {email, password})
-    return response
+    const {data} = await $host.post('api/user/login', {email, password})
+    localStorage.setItem('token', data.token)
+    return jwt_decode(data.token)
 }
 
 export const check = async () => {
-    const response = await $host.post('api/auth/registration',)
-    return response
+    const {data} = await $authHost.get('api/user/auth',)
+    localStorage.setItem('token', data.token)
+    return jwt_decode(data.token)
 }
